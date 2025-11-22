@@ -1,0 +1,20 @@
+# Firebase config protection
+firebaseConfig.js
+firebase-config.js
+config.js
+
+# Environment keys
+.env
+.env.local
+.env.development
+.env.production
+
+# Node modules
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
