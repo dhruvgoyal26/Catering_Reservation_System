@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Agarwal Catering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      padding-top: 80px;
+    }
+
+    nav {
+      background-color: #000;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    .contact-section {
+      padding: 60px 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .contact-section h1 {
+      font-size: 42px;
+      color: gold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .contact-section p {
+      text-align: center;
+      color: #ccc;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .contact-info h2 {
+      color: gold;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      color: #ddd;
+    }
+
+    .contact-form {
+      flex: 1;
+      min-width: 280px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 10px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .contact-form textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: gold;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: orange;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">🍽️ Agarwal Catering</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="aboutus.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </nav>
+
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>We're here to help! Feel free to reach out for any queries or bookings.</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Our Info</h2>
+        <p><strong>Address:</strong> Dayalbagh Food Street, Agra, India</p>
+        <p><strong>Phone:</strong> +91 7417382956</p>
+        <p><strong>Email:</strong> info@agarwalcatering.com</p>
+        <p><strong>Hours:</strong> Mon - Sat: 9 AM - 9 PM</p>
+      </div>
+
+      <div class="contact-form">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const service = params.get('service');
+      if (service) {
+        const messageField = document.getElementById('message');
+        if (messageField) {
+          messageField.value = `Hello, I'm interested in your ${service} service. Please contact me.`;
+        }
+      }
+    });
+  </script>  
+</body>
+</html>

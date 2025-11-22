@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      padding-top: 70px;
+    }
+
+    nav {
+      background-color: #000;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .logo span {
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    .menu-header {
+      position: fixed;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 40px 20px 20px;
+      background: linear-gradient(to right, #000428, #004e92);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      z-index: 999;
+    }
+
+    .menu-header h1 {
+      font-size: 48px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .menu-header p {
+      font-size: 20px;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 160px 40px 40px;
+    }
+
+    .menu-card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .menu-card h3 {
+      color: gold;
+      margin-bottom: 8px;
+    }
+
+    .menu-card p {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    .menu-card .buttons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .menu-card button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .menu-card .add-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .menu-card .add-btn:hover {
+      background-color: #218838;
+      transform: scale(1.05);
+    }
+
+    .menu-card .remove-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .menu-card .remove-btn:hover {
+      background-color: #c82333;
+      transform: scale(1.05);
+    }
+  </style>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="menu.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="logo"><span>🍽️</span> Catering System</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="items.html">Catering Packages</a>
+      <div class="navbar-cart" style="position: relative;">
+        <a href="cart.html" class="cart-icon" style="position: relative;">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" style="background:red; color:white; border-radius:50%; padding:2px 6px; font-size:12px; position:absolute; top:-5px; right:-10px; display:none;">0</span>
+        </a>
+      </div>
+      
+    </div>
+    
+  </nav>
+
+  <div class="menu-header">
+    <h1>🍽️ Our Delicious Menu</h1>
+    <p>“Taste that touches your soul”</p>
+  </div>
+
+  <div class="menu-grid">
+    <!-- Sample Menu Items -->
+    <div class="menu-card" data-price="300">
+      <img src="menu images/biryani.jpeg">
+      <h3>Biryani</h3>
+      <p>Spicy and flavorful rice dish.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="250">
+      <img src="menu images/paneer.jpeg">
+      <h3>Paneer Tikka</h3>
+      <p>Grilled cottage cheese perfection.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="200">
+      <img src="menu images/pizza.jpeg">
+      <h3>Pizza</h3>
+      <p>Cheesy, crispy, delicious.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="260">
+      <img src="menu images/dosa.jpeg">
+      <h3>Masala Dosa</h3>
+      <p>South Indian delicacy with chutney.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="100">
+      <img src="menu images/burger.jpeg">
+      <h3>Burger</h3>
+      <p>Juicy layers in a bun.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="40">
+      <img src="menu images/gulabjamun.jpeg">
+      <h3>Gulab Jamun</h3>
+      <p>Sweet, syrupy delight.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="300">
+      <img src="menu images/chowmein.jpeg">
+      <h3>Chow Mein</h3>
+      <p>Stir-fried noodle magic.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="350">
+      <img src="menu images/butterchicken.jpeg">
+      <h3>Butter Chicken</h3>
+      <p>Rich and creamy classic.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="200">
+      <img src="menu images/cholebhature.jpeg">
+      <h3>Chole Bhature</h3>
+      <p>Fluffy bread with spicy chickpeas.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="150">
+      <img src="menu images/icecream.jpeg">
+      <h3>Ice Cream</h3>
+      <p>Cool, creamy treat.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="120">
+      <img src="menu images/idli.jpeg">
+      <h3>Idli Sambar</h3>
+      <p>Soft idlis with tangy sambar.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="menu-card" data-price="100">
+      <img src="menu images/lassi.jpeg">
+      <h3>Lassi</h3>
+      <p>Refreshing yogurt drink.</p>
+      <div class="buttons">
+        <button class="add-btn">Add</button>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+    
+  </div>
+
+  <script>
+    document.querySelectorAll('.add-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item added to cart!');
+      });
+    });
+
+    document.querySelectorAll('.remove-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Item removed from cart!');
+      });
+    });
+  </script>
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="menu.js"></script>  
+</body>
+
+</html>

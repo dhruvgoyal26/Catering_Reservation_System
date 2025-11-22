@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>₹450 Catering Package - Agarwal Catering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      padding-top: 80px;
+    }
+
+    nav {
+      background-color: #000;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    .package-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .package-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .package-header h1 {
+      font-size: 42px;
+      color: gold;
+    }
+
+    .package-header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-box img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .items-list {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    .items-list h2 {
+      margin-bottom: 20px;
+      color: lightgreen;
+    }
+
+    ul {
+      list-style: circle;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #eee;
+    }
+
+    .price-tag {
+      margin-top: 30px;
+      font-size: 24px;
+      color: gold;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="package.js"></script>  
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🍽️ Agarwal Catering</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="aboutus.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </div>
+  </nav>
+
+  <div class="package-section">
+    <div class="package-header">
+      <h1>₹650 Plate Package</h1>
+      <p>Perfect for small events and functions. Delicious and fulfilling!</p>
+    </div>
+
+    <div class="image-box">
+      <img src="menu images/450plate.jpg" alt="450 Package Food" />
+    </div>
+
+    <div class="items-list">
+      <h2>Items Included:</h2>
+      <ul>
+        <li>Veg Biryani / Jeera Rice</li>
+        <li>Butter Paneer Masala</li>
+        <li>Chole / Rajma</li>
+        <li>Poori / Butter Naan</li>
+        <li>Boondi Raita / Plain Curd</li>
+        <li>Seasonal Vegetable</li>
+        <li>Green Salad</li>
+        <li>Sweet (Gulab Jamun or Rasgulla)</li>
+        <li>Pickle & Papad</li>
+        <li>Mineral Water (250ml)</li>
+      </ul>
+      <div class="price-tag">Total Price: ₹650 / plate</div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="bookPackageBtn" style="padding: 12px 24px; background-color: gold; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px;">
+        Book This Package
+      </button>
+    </div>
+    
+  </div>
+
+</body>
+</html>

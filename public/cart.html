@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #141E30, #243B55);
+      color: white;
+      padding: 80px 20px;
+    }
+
+    nav {
+      background-color: #000;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 36px;
+      color: gold;
+    }
+
+    .cart-container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    .cart-item img {
+      width: 120px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+
+    .item-details {
+      flex-grow: 1;
+    }
+
+    .item-details h3 {
+      margin-bottom: 5px;
+      color: gold;
+    }
+
+    .item-details p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .remove-btn {
+      background-color: red;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .remove-btn:hover {
+      background-color: darkred;
+    }
+  </style>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="cart.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🍽️ Agarwals Catering</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <div class="navbar-cart" style="position: relative;">
+        <a href="cart.html" class="cart-icon" style="position: relative;">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" style="background:red; color:white; border-radius:50%; padding:2px 6px; font-size:12px; position:absolute; top:-5px; right:-10px; display:none;">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Your Cart</h1>
+  <div class="cart-container" id="cartItems"></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Catering Package</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      padding: 100px 20px;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: lightgreen;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: gold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Book Your Event</h1>
+    <form id="bookingForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" required />
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" required />
+
+      <label for="address">Event Address</label>
+      <textarea id="address" required></textarea>
+
+      <label for="occasion">Occasion</label>
+      <input type="text" id="occasion" required />
+
+      <label for="date">Event Date</label>
+      <input type="date" id="date" required />
+
+      <!-- hidden fields -->
+      <input type="hidden" id="plates" />
+      <input type="hidden" id="advance" />
+
+      <button type="submit">Request for Booking</button>
+    </form>
+  </div>
+
+  <script type="module" src="firebase-init.js"></script>
+  <script type="module" src="booking.js"></script>
+</body>
+</html>

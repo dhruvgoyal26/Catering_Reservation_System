@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catering Items - Agarwal Catering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: #fff;
+      padding-top: 80px;
+    }
+
+    nav {
+      background-color: #000;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+    }
+
+    .section-header {
+      text-align: center;
+      margin: 50px 0 20px;
+    }
+
+    .section-header h1 {
+      font-size: 42px;
+      color: gold;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    .item-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .item-card {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+    }
+
+    .item-card h2 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .item-card p {
+      font-size: 16px;
+      color: #ddd;
+    }
+
+    .price {
+      font-size: 20px;
+      margin-top: 10px;
+      color: lightgreen;
+      font-weight: bold;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .details-button,
+    .book-button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .details-button {
+      background-color: gold;
+      color: black;
+    }
+
+    .details-button:hover {
+      background-color: orange;
+      color: white;
+    }
+
+    .book-button {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .book-button:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 768px) {
+      .item-container {
+        padding: 20px;
+      }
+    }
+  </style>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="items.js"></script>  
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🍽️ Agarwal Catering</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="aboutus.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+      <div class="navbar-cart" style="position: relative;">
+        <a href="cart.html" class="cart-icon" style="position: relative;">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" style="background:red; color:white; border-radius:50%; padding:2px 6px; font-size:12px; position:absolute; top:-5px; right:-10px; display:none;">0</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="section-header">
+    <h1>Our Catering Packages</h1>
+    <p>Explore our best-value catering sets for every event.</p>
+  </div>
+
+  <div class="item-container">
+    <div class="item-card">
+      <h2>100 Plates Set</h2>
+      <p>🍛 North Indian Delight A hearty selection of classic North Indian dishes like Butter Chicken, Paneer Tikka, Dal Makhani, Naan, and more — served with aromatic rice and traditional condiments.</p>
+      <div class="price">₹650 / plate</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=100" class="book-button">Book Now</a>
+
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>200 Plates Set</h2>
+      <p>🍛 North Indian Delight A hearty selection of classic North Indian dishes like Butter Chicken, Paneer Tikka, Dal Makhani, Naan, and more — served with aromatic rice and traditional condiments.</p>
+      <div class="price">₹550 / plate</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=200" class="book-button">Book Now</a>
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>VIP Buffet Set</h2>
+      <p>🥂 VIP Buffet Set An elegant buffet arrangement with premium dishes, live chef stations, curated menus, imported cutlery, and dedicated serving staff. Perfect for luxury events.</p>
+      <div class="price">₹15000 / table</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=400" class="book-button">Book Now</a>
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>Wine Counters</h2>
+      <p>🍷 Elevate your celebration with our curated wine counters — offering a selection of fine wines and beverages to add a touch of luxury and sophistication to your event.</p>
+      <div class="price">Starts at ₹20000</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=500" class="book-button">Book Now</a>
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>Sweet Counter</h2>
+      <p>🍬 Sweet Counter Traditional Indian sweets including Gulab Jamun, Rasgulla, Jalebi, Kaju Katli — elegantly displayed for a festive finish to your celebration.</p>
+      <div class="price">₹10000/ counter</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=300" class="book-button">Book Now</a>
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>South Indian Combo</h2>
+      <p>🍛 South Indian Thali Idli, Dosa, Vada, Sambar, Coconut Chutney, steamed rice, and tangy rasam served with traditional hospitality.</p>
+      <div class="price">₹600 / plate</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=250" class="book-button">Book Now</a>
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>Fruit Counter</h2>
+      <p>🍇 Fruit Counter Fresh seasonal fruits like kiwi, dragon fruit, grapes, and melons — beautifully arranged for a refreshing and healthy experience.</p>
+      <div class="price">₹8000/ counter</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=350" class="book-button">Book Now</a>
+      </div>
+    </div>
+
+    <div class="item-card">
+      <h2>Kashmiri Combo</h2>
+      <p>🍛 Kashmiri Combo Rogan Josh, Yakhni, Dum Aloo, and Kashmiri Pulao — served with naan, salad, and saffron dessert. A royal taste of Kashmir.</p>
+      <div class="price">₹900 / plate</div>
+      <div class="button-group">
+        <a href="package-450.html" class="details-button">View Details</a>
+        <a href="booking.html?plates=300" class="book-button">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

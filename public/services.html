@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #000428, #004e92);
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services-container h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: lightgreen;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 255, 127, 0.4);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.service-card p {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.service-card button {
+  background-color: #7ed957;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.service-card button:hover {
+  background-color: #5ab24f;
+}
+
+  </style>
+  <script type="module" src="main.js"></script>
+  <script type="module" src="services.js"></script>  
+</head>
+<body>
+  <div class="services-container">
+    <h1>Services</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="servicesimages/wedding.jpeg" alt="Wedding Catering">
+        <h3>Weddings</h3>
+        <p>We make sure to make your wedding more memorable by serving the best food to you and your guests.</p>
+        <button>Enquire Now</button>
+      </div>
+      <div class="service-card">
+        <img src="servicesimages/corporate.avif" alt="Corporate Event Catering">
+        <h3>Corporate Events</h3>
+        <p>Make your next event a success. We serve the right kind of delicacies keeping in mind your guest profile.</p>
+        <button>Enquire Now</button>
+      </div>
+      <div class="service-card">
+        <img src="servicesimages/private.avif" alt="Private Party Catering">
+        <h3>Private Events</h3>
+        <p>We ensure that the event is made memorable with exquisite delicacies prepared according to the theme of the event.</p>
+        <button>Enquire Now</button>
+      </div>
+      <div class="service-card">
+        <img src="servicesimages/birthday.avif" alt="Birthday Party Catering">
+        <h3>Birthday Parties</h3>
+        <p>Our team is committed to making your events run smoothly by providing delicious food.</p>
+        <button>Enquire Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment | Agarwal Catering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .payment-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: gold;
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: lightgreen;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5ab24f;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-box">
+    <h1>Payment Gateway</h1>
+    <p>This is a demo payment page. Click below to simulate payment success.</p>
+    <button id="payBtn">Pay ₹<span id="amount">0</span> Now</button>
+  </div>
+
+  <script>
+    // Load total from cart
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    document.getElementById('amount').textContent = total;
+
+    document.getElementById('payBtn').addEventListener('click', () => {
+      alert("Payment successful! Thank you for your order.");
+      localStorage.removeItem('cart'); // clear cart
+      window.location.href = "thankyou1.html"; // go back to homepage
+    });
+  </script>
+</body>
+</html>
